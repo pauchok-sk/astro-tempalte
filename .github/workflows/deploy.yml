@@ -1,0 +1,39 @@
+name: Deploy to GitHub Pages
+
+on:
+  # Вызывать workflow при каждом пуше в ветку `main`
+  # Используете другое имя для ветки? Замените `main` на имя своей ветки
+  push:
+    branches: [ main ]
+  # Разрешает запускать этот workflow вручную с вкладки Actions на GitHub.
+  workflow_dispatch:
+
+# Разрешить этому workflow клонировать репозиторий и создавать развёртывание Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+      - name: Install, build, and upload your site
+        uses: withastro/action@v3
+        # with:
+          # path: . # Корень вашего проекта Astro внутри репозитория (опционально)
+          # node-version: 20 # Версия Node, которую следует использовать для сборки сайта. По умолчанию 20. (опционально)
+          # package-manager: pnpm@latest # Менеджер пакетов Node, который следует использовать для установки зависимостей и сборки сайта. Автоматически определяется на основе лок-файла. (опционально)
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
