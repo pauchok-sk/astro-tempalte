@@ -5,7 +5,7 @@ import { viteStaticCopy } from "vite-plugin-static-copy";
 // https://astro.build/config
 export default defineConfig({
   site: "https://pauchok-sk.github.io",
-  base: ".",
+  base: "/astro-tempalte",
   output: "static",
 
   compressHTML: false,
@@ -14,6 +14,7 @@ export default defineConfig({
     assets: "assets",
   },
   vite: {
+    // base: "./",
     plugins: [
       viteStaticCopy({
         targets: [
