@@ -6,6 +6,7 @@ import { viteStaticCopy } from "vite-plugin-static-copy";
 export default defineConfig({
   site: 'https://pauchok-sk.github.io',
   base: "./",
+  output: "static",
 
   compressHTML: false,
   vite: {
