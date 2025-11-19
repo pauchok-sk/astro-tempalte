@@ -5,8 +5,8 @@ import { viteStaticCopy } from "vite-plugin-static-copy";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://pauchok-sk.github.io',
-  base: "/dist",
-  
+  base: "/",
+
   compressHTML: false,
   vite: {
     plugins: [
