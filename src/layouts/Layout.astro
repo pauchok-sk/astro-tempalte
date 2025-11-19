@@ -1,6 +1,6 @@
 ---
-import "../styles/main.scss";
-import Head from "../components/Head.astro";
+import "@/assets/styles/main.scss";
+import Head from "@/components/Head.astro";
 ---
 
 <!doctype html>
@@ -9,5 +9,5 @@ import Head from "../components/Head.astro";
   <body>
     <slot />
   </body>
-  <script src="/scripts/main.js" is:inline></script>
+  <script type="module" src="/assets/scripts/main.js" is:inline></script>
 </html>
