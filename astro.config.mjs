@@ -16,13 +16,13 @@ const plugins = [
 // https://astro.build/config
 export default defineConfig({
   site: "https://pauchok-sk.github.io",
-  // base: "/astro-tempalte",
   output: "static",
 
   compressHTML: false,
   build: {
     inlineStylesheets: `never`,
     assets: "assets",
+    assetsPrefix: "./",
   },
   vite: {
     plugins,
