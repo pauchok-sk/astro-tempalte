@@ -1,3 +1,7 @@
-console.log(Fancybox);
+import initFunction from "./functions/initFunction.js";
+import text from "./functions/text.js";
 
-console.log("fa")
+initFunction();
+text()
+
+Fancybox.bind("[data-fancybox]", {})

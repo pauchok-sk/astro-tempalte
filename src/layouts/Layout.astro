@@ -1,6 +1,7 @@
 ---
 import "@/assets/styles/main.scss";
 import Head from "@/components/Head.astro";
+import Modals from '@/components/modals/Modals.astro';
 ---
 
 <!doctype html>
@@ -9,6 +10,8 @@ import Head from "@/components/Head.astro";
   <body>
     <slot />
   </body>
+
+  <Modals />
   <script src="./files/fancybox/fancybox.min.js" is:inline></script>
   <script type="module" src="./assets/scripts/main.js" is:inline></script>
 </html>

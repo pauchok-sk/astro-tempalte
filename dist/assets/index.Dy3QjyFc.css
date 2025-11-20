@@ -311,3 +311,7 @@ template {
   width: 1200px;
   margin: 0 auto;
 }
+
+.modal {
+  display: none;
+}
