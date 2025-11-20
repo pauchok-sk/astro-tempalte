@@ -1,2 +1,3 @@
-console.log("hello");
-console.log("world");
+console.log(Fancybox);
+
+console.log("fa")
