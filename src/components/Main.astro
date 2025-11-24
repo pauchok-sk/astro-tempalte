@@ -1,5 +1,6 @@
 ---
-import { Image } from "astro:assets";
+import Img from "@/ui/Img.astro";
+import imgSrc from "@img/img.jpg";
 ---
 
 <section>
@@ -7,6 +8,6 @@ import { Image } from "astro:assets";
     <h2>Главная страница</h2>
     <p>Это главная страница, которая создана на astro!!!</p>
     <button data-fancybox data-src="#modal-test">Вызвать модалку</button>
-    <img src="@img/fosters.jpg" alt="image" />
+    <Img src={imgSrc} />
   </div>
 </section>

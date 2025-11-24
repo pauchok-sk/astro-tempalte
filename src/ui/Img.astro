@@ -1,0 +1,12 @@
+---
+import { getImage } from "astro:assets";
+
+const { src, alt } = Astro.props;
+const optimizedImage = await getImage({
+  src: src,
+  format: "webp",
+});
+const imagePath = `.${optimizedImage.src}`;
+---
+
+<img src={imagePath} alt={alt || "image"} />

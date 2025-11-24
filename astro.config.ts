@@ -31,7 +31,6 @@ const plugins = [
 export default defineConfig({
   site: "https://pauchok-sk.github.io",
   output: "static",
-
   compressHTML: false,
   build: {
     inlineStylesheets: `never`,
