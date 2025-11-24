@@ -12,7 +12,7 @@ const plugins = [
       },
     ],
   }),
-  liveReload(["src/assets/scripts/**/*.js"]),
+  liveReload(["src/assets/scripts/**/*.js"], { alwaysReload: false }),
 ];
 
 // https://astro.build/config
@@ -33,6 +33,19 @@ export default defineConfig({
     plugins,
     build: {
       minify: false,
+      rollupOptions: {
+        output: {
+          assetFileNames: (assetInfo) => {
+            if (assetInfo.name) {
+              const extType = assetInfo.name.split(".").at(1);
+              if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+                return `assets/img/[name]-[hash][extname]`;
+              }
+            }
+            return `assets/[name]-[hash][extname]`;
+          },
+        },
+      },
     },
   },
 });
