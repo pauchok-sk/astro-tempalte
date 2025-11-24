@@ -1,7 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import imgSrc from "@img/img.jpg";
-import imgGgSrc from "@img/gg.png";
 ---
 
 <section>
@@ -9,7 +7,6 @@ import imgGgSrc from "@img/gg.png";
     <h2>Главная страница</h2>
     <p>Это главная страница, которая создана на astro!!!</p>
     <button data-fancybox data-src="#modal-test">Вызвать модалку</button>
-    <Image src={imgSrc} alt="fwefwefwe" width={50} height={50} ? />
-    <Image src={imgGgSrc} alt="fwefwefwe" width={250} height={250} ? />
+    <img src="@img/fosters.jpg" alt="image" />
   </div>
 </section>
