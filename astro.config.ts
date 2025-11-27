@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
+import transformImgPaths from "./plugins/transformImgPaths";
 import liveReload from "vite-plugin-live-reload";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
@@ -13,18 +14,7 @@ const plugins = [
     ],
   }),
   liveReload(["src/assets/scripts/**/*.js"], { alwaysReload: false }),
-  {
-    name: "transform-img-paths",
-    transform(src: string, id: string) {
-      if (id.endsWith(".astro")) {
-        return {
-          code: src.replace(/src="@img\/([^"]+)"/g, 'src="./img/$1"'),
-          map: null,
-        };
-      }
-      return null;
-    },
-  },
+  transformImgPaths(),
 ];
 
 // https://astro.build/config

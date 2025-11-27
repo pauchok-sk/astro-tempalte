@@ -7,15 +7,23 @@
   <link rel="stylesheet" href="./files/fancybox/fancybox.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Astro Basics</title>
-<link rel="stylesheet" href="./assets/index-BqR1RG9P.css"></head>
+<link rel="stylesheet" href="./assets/index-_MHUo8it.css"></head>
   <body>
     
   <section>
   <div class="container">
-    <h2>Главная страница</h2>
-    <p>Это главная страница, которая создана на astro!!!</p>
-    <button data-fancybox data-src="#modal-test">Вызвать модалку</button>
-    <img src="./assets/img/img-BCX25r6W_EtR3t.webp" alt="image">
+    <h2 class="title">Главная страница</h2>
+    <p class="descr">Это главная страница, которая создана на astro!!!</p>
+    <button data-fancybox data-src="#modal-test" class="btn-s">Вызвать модалку</button>
+    <a href="/about" class="btn-s">Страница о нас</a>
+    <div class="block-img">
+      <div class="block-img-title">Это обработанное изображение</div>
+      <img src="./assets/img/img-BCX25r6W_EtR3t.webp" alt="image">
+    </div>
+    <div class="block-img">
+      <div class="block-img-title">Изображение, которое не поддалось обработке</div>
+      <img src="./img/fosters.jpg" alt="image">
+    </div>
     
   </div>
 </section>

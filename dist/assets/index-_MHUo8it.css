@@ -326,12 +326,51 @@ template {
 }
 
 .container {
-  width: 1200px;
+  width: 1000px;
   margin: 0 auto;
 }
 
 img {
   max-width: 100%;
+}
+
+.title {
+  font-size: 26px;
+  text-align: center;
+}
+
+.descr {
+  text-align: center;
+  font-size: 16px;
+}
+
+.btn-s {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  cursor: pointer;
+  padding: 15px 20px;
+  background-color: #e4dfdf;
+  border: none;
+  margin: 30px auto;
+  color: black;
+  text-decoration: none;
+}
+
+.block-img {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.block-img img {
+  width: 100%;
+  display: block;
+}
+
+.block-img-title {
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .modal {

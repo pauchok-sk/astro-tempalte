@@ -5,10 +5,18 @@ import imgSrc from "@img/img.jpg";
 
 <section>
   <div class="container">
-    <h2>Главная страница</h2>
-    <p>Это главная страница, которая создана на astro!!!</p>
-    <button data-fancybox data-src="#modal-test">Вызвать модалку</button>
-    <Img src={imgSrc} />
+    <h2 class="title">Главная страница</h2>
+    <p class="descr">Это главная страница, которая создана на astro!!!</p>
+    <button data-fancybox data-src="#modal-test" class="btn-s">Вызвать модалку</button>
+    <a href="/about" class="btn-s">Страница о нас</a>
+    <div class="block-img">
+      <div class="block-img-title">Это обработанное изображение</div>
+      <Img src={imgSrc} />
+    </div>
+    <div class="block-img">
+      <div class="block-img-title">Изображение, которое не поддалось обработке</div>
+      <img src="@img/fosters.jpg" alt="image">
+    </div>
     
   </div>
 </section>
