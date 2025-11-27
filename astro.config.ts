@@ -26,6 +26,7 @@ export default defineConfig({
     inlineStylesheets: `never`,
     assets: "assets",
     assetsPrefix: "./",
+    format: 'file'
   },
   devToolbar: {
     enabled: false,
